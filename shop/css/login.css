@@ -1,0 +1,12 @@
+*{padding: 0;margin: 0;}
+a{text-decoration: none;}
+ul{list-style: none;}
+em{font-style: normal;}
+b{font-weight: normal;}
+.logo{width: 113px;height: 195px;margin-top: 80px;margin-left: 743px;}
+.login{margin-left: 650px;margin-top: 70px;}
+.login p{width: 300px;height: 46px;margin-bottom: 12px;border-bottom: 4px solid #25292E;position: relative;}
+.login p input{width: 220px;height: 46px;border: none;outline: none;font-size: 16px;line-height: 46px;padding: 0 40px;}
+.nlphone{display: block;width: 19px;height: 24px;background: url(../img/nlphone.png) no-repeat;position: absolute;left: 8px;top: 10px;}
+.nlcode{display: block;width: 16px;height: 20px;background: url(../img/nlcode.png) no-repeat;position: absolute;left: 10px;top: 12px;}
+#btn{background-color: #25292e;color: #fff;font-size: 16px;cursor: pointer;margin-top: 30px;width: 300px;}

@@ -1,0 +1,14 @@
+*{padding: 0;margin: 0;}
+a{text-decoration: none;}
+ul{list-style: none;}
+em{font-style: normal;}
+b{font-weight: normal;}
+body{background-color: #999;}
+.logo{width: 225px;height: 92px;margin-top: 175px;margin-left: 645px;}
+.register{width: 450px;height: 350px;margin-top: 40px;margin-left: 535px;color: #f2f2f2;font-size: 14px;}
+.success{color: lightgreen;font-size: 14px;margin-left: 70px;display: none;}
+.error{color: red;font-size: 14px;margin-left: 70px;display: none;}
+.register p input{width: 260px;height: 50px;border: none;outline: none;background-color: #ccc;margin-bottom: 12px;font-size: 16px;line-height: 50px;padding: 0 20px;color: white;}
+#btn{background-color: #25292e;color: #fff;font-size: 16px;cursor: pointer;margin-top: 30px;width: 300px;margin-left: 70px;}
+.success1{color: lightgreen;font-size: 14px;margin-left: 70px;display: none;}
+.error1{color: red;font-size: 14px;margin-left: 70px;display: none;}

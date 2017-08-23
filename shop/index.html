@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<title>首页</title>
+	</head>
+	<body>
+		<header>
+			<nav id="nav">
+				<a href="index.html" id="logo"></a>
+				<div class="navText">
+					<span class="login">
+						<a href="login.html">登录</a>
+						<a href="register.html">注册</a>
+					</span>
+					<em>|</em>
+					<a href="#" class="cur" id="cart">购物车</a>
+					<em>|</em>
+					<a href="#" class="cur">消息</a>
+					<em>|</em>
+					<a href="#" class="cur">添加良品</a>
+				</div>
+			</nav>
+			<ul class="goodsMajor">
+				<div class="serach">
+					<em id="magnifier"></em>
+				</div>
+				<div class="moveSerach"><input type="text" id="serachText" placeholder="Search..."/></div>
+			</ul>
+		</header>
+		<section>
+			<div class="showPic">
+				<ul id="autoPlay">
+					<li><a href="#"><img src="img/1045.jpg" /></a></li>
+					<li><a href="#"><img src="img/1049.gif" /></a></li>
+					<li><a href="#"><img src="img/1052.jpg" /></a></li>
+					<li><a href="#"><img src="img/1053.jpg" /></a></li>
+					<li><a href="#"><img src="img/1055.jpg" /></a></li>
+					<li><a href="#"><img src="img/1058.jpg" /></a></li>
+					<li><a href="#"><img src="img/1059.jpg" /></a></li>
+					<li><a href="#"><img src="img/1060.jpg" /></a></li>
+				</ul>
+				<em id="btnLeft"></em>
+				<em id="btnRight"></em>
+			</div>
+			<div class="circles">
+				<ul>
+					<li class="cur"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="contentPic">
+				<div class="leftPic">
+					<div class="leftPic_1">
+						<a href="#"><img src="img/28373.jpg" alt="" /></a>
+					</div>
+					<div class="leftPic_2">
+						<a href="#"><img src="img/28374.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="midPic">
+						<a href="#"><img src="img/28377.jpg" alt="" /></a>
+				</div>
+				<div class="RightPic">
+					<div class="RightPic_1">
+						<a href="#"><img src="img/28375.jpg" alt="" /></a>
+					</div>
+					<div class="RightPic_2">
+						<a href="#"><img src="img/28376.jpg" alt="" /></a>
+					</div>
+				</div>
+			</div>
+			<div id="hotStuff">
+				<h6>人气良品</h6>
+				<ul id="hotGoods"></ul>
+			</div>
+		</section>
+	</body>
+</html>

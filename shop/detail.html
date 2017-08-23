@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/detail.js"></script>
+		<title>商品详情页</title>
+	</head>
+	<body>
+		<header>
+			<nav id="nav">
+				<a href="index.html" id="logo"></a>
+				<div class="navText">
+					<span class="login">
+						<a href="login.html">登录</a>
+						<a href="register.html">注册</a>
+					</span>
+					<em>|</em>
+					<a href="#" class="cur" id="cart">购物车</a>
+					<em>|</em>
+					<a href="#" class="cur">消息</a>
+					<em>|</em>
+					<a href="#" class="cur">添加良品</a>
+				</div>
+			</nav>
+			<ul class="goodsMajor">
+				<div class="serach">
+					<em id="magnifier"></em>
+				</div>
+				<div class="moveSerach"><input type="text" id="serachText" placeholder="Search..."/></div>
+			</ul>
+		</header>
+		<section>
+			<div id="detail">
+				<h6>商品详情</h6>
+				<div class="goods">
+					<div class="left"></div>
+					<div class="right">
+						<div class="disc"></div>
+						<div class="cart">
+							<button id="btn1">立即购买</button>
+							<button id="btn2">加入购物车</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
