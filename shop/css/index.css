@@ -40,7 +40,7 @@ nav{width: 100%;height: 56px;background-color: #25292e;overflow: hidden;}
 .RightPic_1{margin-bottom: 23px;}
 #hotStuff{width: 1000px;margin-left: 300px;}
 #hotStuff h6{width: 1000px;height: 30px;line-height: 30px;border-bottom: 1px solid #ccc;text-align: center;margin-top: 50px;}
-#hotGoods{width: 1024px;margin-top: 40px;}
+#hotGoods{width: 1024px;height: 1640px;margin-top: 40px;}
 #hotGoods li{width: 317px;height: 380px;float: left;margin-right: 24px;margin-bottom: 30px;position: relative;}
 #hotGoods li:hover .cover{display: block;}
 #hotGoods li a img{width: 317px;height: 317px;}
@@ -48,3 +48,37 @@ nav{width: 100%;height: 56px;background-color: #25292e;overflow: hidden;}
 .cover h2{margin-left: 22px;margin-top: 22px;margin-bottom: 90px;font-size: 22px;color: #0c6eba;}
 .cover p{width: 245px;margin: 0 auto;font-size: 14px;margin-bottom: 10px;text-align: center;font-weight: 700;color: white;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .cover span{display: block;width: 265px;color: white;font-size: 12px;margin: 20px auto;text-align: center;}
+footer{padding-top: 40px;}
+.footTop{width: 100%;height: 247px;border-top: 1px solid #ccc;background-color: #fbfdfe;clear: both;position: relative;}
+.footTop h4{width: 177px;height: 15px;background: url(../img/images.png) no-repeat 0 -417px;margin: 50px auto;}
+#point{background: url(../img/images.png) no-repeat -173px -356px;position: absolute;top: 50px;left: 650px;width: 27px;height: 15px;}
+.footPc{width: 100%;height: 165px;background-image: url(../img/footTop.png);margin-top: -30px;}
+.foot{width: 100%;height: 223px;background-color: #25292e;border-bottom: 1px solid black;}
+.wrap{width: 1210px;height: 223px;margin: 0 auto;}
+.wrapLeft{width: 800px;height: 183px;padding-top: 40px;padding-left: 100px;float: left;}
+.phone{width: 196px;height: 44px;padding-left: 60px;position: relative;cursor: pointer;}
+.phonePc{width: 25px;height: 44px;position: absolute;left: 0px;background: url(../img/images.png) no-repeat -175px 0;}
+.phoneQr{width: 200px;height: 120px;position: absolute;top:-170px;left: 0px;display: none;}
+.phonerQrPc{width: 200px;height: 100px;background: url(../img/images.png) no-repeat 0 -47px;}
+.phonerQrText{width: 200px;height: 20px;}
+.phonerQrText b{display: inline-block;height: 20px;line-height: 20px;margin-right: 5px;font-size: 14px;}
+.phone p{font-size: 14px;color: white;margin-bottom: 5px;opacity: 0.3;}
+.phone span{font-size: 14px;color: white;opacity: 0.3;}
+.friendly{width: 800px;height: 108px;margin-top: 20px;letter-spacing: 2px;}
+.friendly p{font-size: 13px;color: #5c5c5c;margin-top: 3px;}
+.friendly p a{font-size: 13px;color: white;opacity: 0.3;padding: 0 10px;border-right: 1px solid #5c5c5c;}
+.friendly p a.lastA{border: none;}
+.friendly p a.firstA{padding-left: 0;}
+.wrapRight{width: 200px;height: 30px;padding-top: 40px;float: left;}
+.wrapRight ul{width: 200px;height: 30px;position: relative;}
+.wrapRight ul li{float: right;margin-left: 27px;}
+.wechat{width: 25px;height: 19px;background: url(../img/images.png) no-repeat -100px 0;}
+.wechat:hover{background-position-y: -24px;}
+.dou{width: 18px;height: 19px;background: url(../img/images.png) no-repeat -129px 0;}
+.dou:hover{background-position-y: -24px;}
+.weibo{width: 23px;height: 19px;background: url(../img/images.png) no-repeat -150px 0;}
+.weibo:hover{background-position-y: -24px;}
+.wechatQr{width: 145px;height: 145px;background: url(../img/images.png) no-repeat 0 -148px;position: absolute;left: 20px;top: -185px;display: none;}
+.moreGoods{width: 100%;height: 54px;padding: 10px 0 60px 0;}
+.moreGoods a{display: block;width: 148px;height: 50px;border: 2px solid #25292e;color: #25292e;line-height: 50px;text-align: center;margin: 0 auto;letter-spacing: 3px;font-weight: 700;}
+.moreGoods a:hover{background-color: #25292e;color: white;}

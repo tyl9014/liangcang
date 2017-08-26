@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>商品分类页面</title>
-		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="css/paging.css"/>
 		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/paging.js"></script>
+		<title>商品分页页</title>
 	</head>
 	<body>
 		<header>
@@ -59,11 +59,39 @@
 					<li></li>
 				</ul>
 			</div>
-			<div id="classific">
-				<h6>商品分类</h6>
-				<ul id="classificList"></ul>
+			<div class="contentPic">
+				<div class="leftPic">
+					<div class="leftPic_1">
+						<a href="#"><img src="img/28373.jpg" alt="" /></a>
+					</div>
+					<div class="leftPic_2">
+						<a href="#"><img src="img/28374.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="midPic">
+						<a href="#"><img src="img/28377.jpg" alt="" /></a>
+				</div>
+				<div class="RightPic">
+					<div class="RightPic_1">
+						<a href="#"><img src="img/28375.jpg" alt="" /></a>
+					</div>
+					<div class="RightPic_2">
+						<a href="#"><img src="img/28376.jpg" alt="" /></a>
+					</div>
+				</div>
 			</div>
-		</section>	
+			<div id="hotStuff">
+				<h6>全部良品</h6>
+				<ul id="hotGoods"></ul>
+			</div>
+		</section>
+		<div class="button" id="button">
+			<em id="ButtonPrev">上一页</em>
+			<div class="button-center">
+				<div id="ButtonCenter"></div>
+			</div>
+			<em id="ButtonNext">下一页</em>
+		</div>
 		<footer>
 			<div class="footTop">
 				<h4></h4>

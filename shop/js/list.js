@@ -113,6 +113,43 @@ $(function(){
 		if(!localStorage.getItem("token")){
 			alert("请登录后才能使用购物车功能！");
 			location.href = "login.html";
+		}else{
+			location.href = "cart.html";
 		}
+	})
+	$("#point").mouseenter(function(){
+		if($(this).is(":animated")) return;
+		$(this).animate({"left": 635},350);
+		$(this).animate({"left": 650},350);
+		$(this).animate({"left": 635},350);
+		$(this).animate({"left": 650},350);
+	})
+	$(".phone").mouseenter(function(){
+//		if($(".phone span").is(":animated")) return; 
+//		if($(".phone p").is(":animated")) return; 
+		$(".phoneQr").css({"display": "block"});
+		$(".phone span").animate({"opacity": 1},300);
+		$(".phone p").animate({"opacity": 1},300);
+	})
+	$(".phone").mouseleave(function(){
+//		if($(".phone span").is(":animated")) return; 
+//		if($(".phone p").is(":animated")) return; 
+		$(".phoneQr").css({"display": "none"});
+		$(".phone span").animate({"opacity": 0.3},300);
+		$(".phone p").animate({"opacity": 0.3},300);
+	})
+	$(".friendly p a").mouseenter(function(){
+//		if($(this).is(":animated")) return; 
+		$(this).animate({"opacity": 1},300);
+	})
+	$(".friendly p a").mouseleave(function(){
+//		if($(this).is(":animated")) return; 
+		$(this).animate({"opacity": 0.3},300);
+	})
+	$(".wechat").mouseenter(function(){
+		$(".wechatQr").css({"display": "block"});
+	})
+	$(".wechat").mouseleave(function(){
+		$(".wechatQr").css({"display": "none"});
 	})
 })

@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>商品分类页面</title>
-		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<title>订单详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/order.css"/>
 		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/order.js"></script>
 	</head>
 	<body>
 		<header>
@@ -33,37 +33,19 @@
 			</ul>
 		</header>
 		<section>
-			<div class="showPic">
-				<ul id="autoPlay">
-					<li><a href="#"><img src="img/1045.jpg" /></a></li>
-					<li><a href="#"><img src="img/1049.gif" /></a></li>
-					<li><a href="#"><img src="img/1052.jpg" /></a></li>
-					<li><a href="#"><img src="img/1053.jpg" /></a></li>
-					<li><a href="#"><img src="img/1055.jpg" /></a></li>
-					<li><a href="#"><img src="img/1058.jpg" /></a></li>
-					<li><a href="#"><img src="img/1059.jpg" /></a></li>
-					<li><a href="#"><img src="img/1060.jpg" /></a></li>
-				</ul>
-				<em id="btnLeft"></em>
-				<em id="btnRight"></em>
+			<div class="showPic"></div>
+			<div class="item">
+				<em>|</em>
+				<span>购物车</span>
+				<em>|</em>
+				<span class="firstSpan">订单</span>
+				<em>|</em>
 			</div>
-			<div class="circles">
-				<ul>
-					<li class="cur"></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+			<div class="address">
+				<span>订单详情</span>
 			</div>
-			<div id="classific">
-				<h6>商品分类</h6>
-				<ul id="classificList"></ul>
-			</div>
-		</section>	
+			<div id="goodsBox"></div>
+		</section>
 		<footer>
 			<div class="footTop">
 				<h4></h4>

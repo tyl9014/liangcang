@@ -20,28 +20,23 @@ nav{width: 100%;height: 56px;background-color: #25292e;overflow: hidden;}
 #magnifier{display: block;width: 43px;height: 38px;background: url(../img/images.png) no-repeat -157px -147px;position: absolute;left: 207px;top: 5px;z-index: 2;cursor: pointer;}
 .moveSerach{float:right;width: 250px;height: 45px;border:none;border-bottom: 4px solid #25292e;position: absolute;left:1210px;top:0;outline: none;}
 #serachText{width: 190px;height: 45px;border:none;border-bottom: 4px solid #25292e;padding: 0 10px;outline: none;}
-.showPic{width: 1000px;height: 475px;overflow: hidden;margin-left: 300px;position: relative;top: 133px;}
-#autoPlay{width: 10000px;height: 475px;position: absolute;left: 0;top: 0;}
-#autoPlay li{width: 1000px;height: 475px;float: left;}
-.showPic em{display:none;background-color: rgba(0,0,0,0.5);}
-#btnLeft{width: 50px;height: 50px;background-image: url(../img/normal_right.png);border-radius: 50%;position: absolute;top: 237px;left: 20px;cursor: pointer;}
-#btnRight{width: 50px;height: 50px;background-image: url(../img/normal_left.png);border-radius: 50%;position: absolute;top: 237px;left: 930px;cursor: pointer;}
-.showPic:hover #btnLeft{display: block;}
-.showPic:hover #btnRight{display: block;}
-.circles{width: 1000px;height: 25px;margin-left: 300px;position: relative;top: 130px;}
-.circles ul{width: 208px;height: 5px; margin: 10px auto;}
-.circles ul li{width: 20px;height: 5px;background-color: #e8e8e8;float: left;margin-left: 6px;cursor: pointer;}
-.circles ul li.cur{background-color: #45494d;}
-#classific{width: 1000px;margin-left: 300px;margin-top: 130px;}
-#classific h6{width: 1000px;height: 30px;line-height: 30px;border-bottom: 1px solid #ccc;text-align: center;margin-top: 50px;}
-#classificList{width: 1024px;margin-top: 40px;}
-#classificList li{width: 317px;height: 380px;float: left;margin-right: 24px;margin-bottom: 30px;position: relative;}
-#classificList li:hover .cover{display: block;}
-#classificList li a img{width: 317px;height: 317px;}
-.cover{width: 320px;height: 320px;background-color: rgba(72,72,72,0.9);display: none;position: absolute;left: 0;top: 0;}
-.cover h2{margin-left: 22px;margin-top: 22px;margin-bottom: 90px;font-size: 22px;color: #0c6eba;}
-.cover p{width: 245px;margin: 0 auto;font-size: 14px;margin-bottom: 10px;text-align: center;font-weight: 700;color: white;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-.cover span{display: block;width: 265px;color: white;font-size: 12px;margin: 20px auto;text-align: center;}
+section{overflow: hidden;}
+.showPic{width: 1000px;height: 475px;margin-left: 300px;position: relative;top: 133px;background-image: url(../img/1063.gif);}
+.item{width: 299px;height: 25px;margin: 165px auto 0;}
+.item span{display: inline-block;width: 133px;height: 25px;line-height: 25px;text-align: center;color: #666;}
+.item span.firstSpan{color: #7b93c4;}
+.address{width: 1210px;;border-bottom: 2px solid #ccc;margin-left: 200px;margin-top: 45px;}
+.address span{display: block;padding: 10px 20px;}
+#goodsBox{width: 1210px;height: auto;border-bottom: 2px solid #ccc;border-top: 2px solid #ccc;margin-left: 200px;}
+.goods{width: 1210px;height: 100px;border-bottom: 1px solid #ccc;}
+.goods-box{float: left;width: 410px;height: 70px;padding: 15px 0;}
+.goods-box img{width: 70px;height: 70px;margin-left: 5px;margin-right: 22px;float: left;}
+.goods-box p{float: left;width: 220px;height: 70px;color: #666;font-size: 14px;display: table-cell;vertical-align: middle;}
+.goods-lists{float: left;width: 50px;height: 70px;padding: 15px 0;font-size: 14px;}
+.center-text{float: left;width: 27px;height: 10px;margin: 30px 0;outline: none;border: none;text-align: center;font-size: 14px;font-weight: 700;}
+.goods-one{float: left;width: 100px;height: 70px;padding: 15px 0;text-align: center;font-weight: bold;line-height: 70px;margin-left: 150px;}
+.goods-sum{float: left;width: 108px;height: 70px;padding: 15px 0;text-align: center;margin-left: 145px;font-weight: bold;line-height: 70px;}
+.order-item{margin-top: 20px;}
 .footTop{width: 100%;height: 247px;border-top: 1px solid #ccc;background-color: #fbfdfe;clear: both;position: relative;}
 .footTop h4{width: 177px;height: 15px;background: url(../img/images.png) no-repeat 0 -417px;margin: 50px auto;}
 #point{background: url(../img/images.png) no-repeat -173px -356px;position: absolute;top: 50px;left: 650px;width: 27px;height: 15px;}

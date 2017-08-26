@@ -88,18 +88,61 @@ $(function(){
 		timer = setInterval(rightBtnHandler,2000);
 	})
 	//轮播图结束
-	$.get("http://h6.duchengjiu.top/shop/api_goods.php",function(data){
-		var obj = data;
-//		console.log(data);
-		for(var i = 0;i < obj.data.length;i++){
-			$("#hotGoods").append("<li><a href='detail.html?goods_id="
-			+ obj.data[i].goods_id
-			+ "'><img src='"
-			+ obj.data[i].goods_thumb
-			+ "' /><div class='cover'><h2>￥"
-			+ obj.data[i].price+"</h2><p>"
-			+ obj.data[i].goods_name+"</p><span>"
-			+ obj.data[i].goods_desc+"</span></div></a></li>")
+	var page = 1;
+	function showShop(page){
+		$.ajax({
+			"url": "http://h6.duchengjiu.top/shop/api_goods.php?page="+page+"&pagesize=12",
+			"type": "GET",
+			"dataType": "json",
+			"success": function(response){
+//				console.log(response);
+				for(var j = 0;j<response.page.page_count;j++){
+					$("#ButtonCenter").append($('<span>' + (j+1) + '</span>' ));
+				}
+			var obj = response;
+			for(var i=0;i<obj.data.length;i++){
+				$("#hotGoods").append("<li><a href='detail.html?goods_id="
+					+ obj.data[i].goods_id
+					+ "'><img src='"
+					+ obj.data[i].goods_thumb
+					+ "' /><div class='cover'><h2>￥"
+					+ obj.data[i].price+"</h2><p>"
+					+ obj.data[i].goods_name+"</p><span>"
+					+ obj.data[i].goods_desc+"</span></div></a></li>")
+				}
+			$("#ButtonCenter span").removeClass();
+			$("#ButtonCenter span").get(page-1).className = "button-center-span";
+			}
+		})
+	}
+	showShop(page);
+	$("#ButtonPrev").click(function(){
+		page--;
+		if(page <= 1) page = 1;
+		$("#hotGoods").html('');
+		showShop(page);
+		if(page > 7){
+			ButtonCenter.style.marginLeft = (page-7) * -28 +"px";
+		}
+	})
+	$("#ButtonNext").click(function(){
+		page++;
+		$("#hotGoods").html('');
+		showShop(page);
+		if(page > 7){
+			ButtonCenter.style.marginLeft = (page-7) * -28 +"px";
+		}
+	})
+	$("#ButtonCenter").click(function(event){
+		event = event || window.event;
+		var target = event.target || event.srcElement;
+		if( target.nodeName === "SPAN" ){
+			page = target.innerText;
+			$("#hotGoods").html('');
+			if(page > 7){
+				ButtonCenter.style.marginLeft = (page-7) * -28 +"px";
+			}
+			showShop(page);
 		}
 	})
 	$("#cart").click(function(){

@@ -2,6 +2,9 @@ $(function(){
 	if(localStorage.getItem("username")){
 		$(".login").html("欢迎您，" + localStorage.getItem("username"));
 	}
+	$("#cart").click(function(){
+		location.href = "cart.html";
+	})
 	$(window).mousewheel(function(event){
 		if($("header").is(":animated")) return;
 		if(event.deltaY < 0){
@@ -45,70 +48,39 @@ $(function(){
 			}
 		}
 	})
-	//轮播图
-	var index = 0;
-	var $aLis1 = $("#autoPlay li");
-	$("#autoPlay").append($aLis1.eq(0).clone());
-	function rightBtnHandler(){
-		if($("#autoPlay").is(":animated")) return;
-		index++;
-		$("#autoPlay").animate({"left": -1000*index},500,function(){
-			if(index > $aLis1.length-1){
-				index = 0;
-				$("#autoPlay").css("left",0);
+	$.ajax({
+		"url": "http://h6.duchengjiu.top/shop/api_order.php?token="+localStorage.token,
+		"type": "GET",
+		"dataType": "json",
+		"success": function(response){
+//			console.log(response);
+			if(response.code === 0){
+				var htmlData = '';
+				for(var i=0;i<response.data.length;i++){
+						var obj = response.data[i];
+//						console.log(obj);
+						htmlData += '<div class="order-item">';
+						htmlData += '<div class="order-item-header">订单号：' +obj.order_id+ '</div>';
+						for(var j=0;j<obj.goods_list.length;j++){
+							var goods = obj.goods_list[j];
+							goods.subtotal = goods.goods_price * goods.goods_number;
+							htmlData += `<div class="goods">
+											<div class="goods-box">
+												<img src="${goods.goods_thumb}" alt="" />
+												<p>${goods.goods_name}</p>
+											</div>
+											<div class="goods-lists">
+												<input type="text" class="center-text" value="x${goods.goods_number}"/>
+											</div>
+											<div class="goods-one">${goods.goods_price}</div>
+											<div class="goods-sum">${goods.subtotal}</div>
+										</div>`;
+						}
+						htmlData += '</div>';
+				}
+				$("#goodsBox").html(htmlData);
 			}
-		});
-		changeCircle();
-	}
-	function changeCircle(){
-		var n = index < $aLis1.length ? index : 0;
-		$(".circles ul li").eq(n).addClass("cur").siblings().removeClass("cur");
-	}
-	var timer = setInterval(rightBtnHandler,2000);
-	$("#btnRight").click(rightBtnHandler);
-	$("#btnLeft").click(function(){
-		if($("#autoPlay").is(":animated")) return;
-		index--;
-		if(index < 0){
-			index = $aLis1.length-1;
-			$("#autoPlay").css("left",-1000*index);
-		}
-		$("#autoPlay").animate({"left": -1000*index},500);
-		changeCircle();
-	});
-	$(".circles ul li").click(function(){
-		index = $(this).index();
-		$("#autoPlay").animate({"left": -1000*index},1500);
-		changeCircle();
-	})
-	$(".showPic").mouseenter(function(){
-		clearInterval(timer);
-	})
-	$(".showPic").mouseleave(function(){
-		timer = setInterval(rightBtnHandler,2000);
-	})
-	//轮播图结束
-	$.get("http://h6.duchengjiu.top/shop/api_goods.php",function(data){
-		var obj = data;
-//		console.log(data);
-		for(var i = 0;i < obj.data.length;i++){
-			$("#hotGoods").append("<li><a href='detail.html?goods_id="
-			+ obj.data[i].goods_id
-			+ "'><img src='"
-			+ obj.data[i].goods_thumb
-			+ "' /><div class='cover'><h2>￥"
-			+ obj.data[i].price+"</h2><p>"
-			+ obj.data[i].goods_name+"</p><span>"
-			+ obj.data[i].goods_desc+"</span></div></a></li>")
-		}
-	})
-	$("#cart").click(function(){
-		if(!localStorage.getItem("token")){
-			alert("请登录后才能使用购物车功能！");
-			location.href = "login.html";
-		}else{
-			location.href = "cart.html";
-		}
+		}	
 	})
 	$("#point").mouseenter(function(){
 		if($(this).is(":animated")) return;
@@ -146,4 +118,3 @@ $(function(){
 		$(".wechatQr").css({"display": "none"});
 	})
 })
-

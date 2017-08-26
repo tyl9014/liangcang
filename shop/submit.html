@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>商品分类页面</title>
-		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<title>结算页面</title>
+		<link rel="stylesheet" type="text/css" href="css/submit.css"/>
 		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/submit.js"></script>
 	</head>
 	<body>
 		<header>
@@ -33,37 +33,44 @@
 			</ul>
 		</header>
 		<section>
-			<div class="showPic">
-				<ul id="autoPlay">
-					<li><a href="#"><img src="img/1045.jpg" /></a></li>
-					<li><a href="#"><img src="img/1049.gif" /></a></li>
-					<li><a href="#"><img src="img/1052.jpg" /></a></li>
-					<li><a href="#"><img src="img/1053.jpg" /></a></li>
-					<li><a href="#"><img src="img/1055.jpg" /></a></li>
-					<li><a href="#"><img src="img/1058.jpg" /></a></li>
-					<li><a href="#"><img src="img/1059.jpg" /></a></li>
-					<li><a href="#"><img src="img/1060.jpg" /></a></li>
-				</ul>
-				<em id="btnLeft"></em>
-				<em id="btnRight"></em>
+			<div class="showPic"></div>
+			<div class="item">
+				<em>|</em>
+				<span>购物车</span>
+				<em>|</em>
+				<span class="firstSpan">付款</span>
+				<em>|</em>
 			</div>
-			<div class="circles">
-				<ul>
-					<li class="cur"></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+			<div class="address">
+				<span>收货地址</span>
 			</div>
-			<div id="classific">
-				<h6>商品分类</h6>
-				<ul id="classificList"></ul>
+			<div class="addressList">
+				<em id="left"></em>
+				<div class="playAddList">
+					<ul class="addList"></ul>
+				</div>
+				<em id="right"></em>
 			</div>
-		</section>	
+			<div class="addNewAddress">
+				<input type="button" value="添加新地址" id="addNew" />
+			</div>
+			<div class="add" id="add">
+				<form>
+					<p><em>收货人名称：</em><input type="text" name="address_name" /></p>
+					<p><em>手机：</em><input type="text" name="mobile" /></p>
+					<p><em>省：</em><input type="text" name="province" /></p>
+					<p><em>市：</em><input type="text" name="city" /></p>
+					<p><em>区：</em><input type="text" name="district" /></p>
+					<p><em>地址：</em><input type="text" name="address" /></p>
+					<input type="button" id="btn" value="新建收货信息" />
+					<input type="button" id="btn1" value="取消添加" />
+				</form>
+			</div>
+			<div class="howMuch">
+				<p>付款总额：<em id="totalPay">￥ 0.00</em></p>
+			</div>
+			<input text="button" class="pay" value="立即结算" />
+		</section>
 		<footer>
 			<div class="footTop">
 				<h4></h4>

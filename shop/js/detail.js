@@ -47,7 +47,7 @@ $(function(){
 					},
 					"dataType": "json",
 					"success": function(response){
-						console.log(search);
+//						console.log(search);
 						$(".left").html("<img src='" + response.data[0].goods_thumb + "' />");
 						$(".right .disc").html("<p>"+ response.data[0].goods_name+"</p><span>" + response.data[0].goods_desc+"</span><h2>￥"+ response.data[0].price+"</h2>");
 					}
@@ -69,7 +69,7 @@ $(function(){
 			},
 			"dataType": "json",
 			"success": function(response){
-				console.log(response);
+//				console.log(response);
 				$(".left").html("<img src='" + response.data[0].goods_thumb + "' />");
 				$(".right .disc").html("<p>"+ response.data[0].goods_name+"</p><span>" + response.data[0].goods_desc+"</span><h2>￥"+ response.data[0].price+"</h2>");
 			}
@@ -83,7 +83,7 @@ $(function(){
 			},
 			"dataType": "json",
 			"success": function(response){
-				console.log(searchText);
+//				console.log(searchText);
 				$(".left").html("<img src='" + response.data[0].goods_thumb + "' />");
 				$(".right .disc").html("<p>"+ response.data[0].goods_name+"</p><span>" + response.data[0].goods_desc+"</span><h2>￥"+ response.data[0].price+"</h2>");
 			}
@@ -95,7 +95,7 @@ $(function(){
 			location.href = "login.html#callback=" + location.href;
 			return;
 		}
-		console.log(goodsId[1]);
+//		console.log(goodsId[1]);
 		var goods_number = localStorage.getItem("cart"+goodsId[1]);
 		goods_number = goods_number ? parseInt(goods_number)+1 : 1;
 		$.ajax({
@@ -112,6 +112,46 @@ $(function(){
 		})
 	})
 	$("#cart").click(function(){
-		location.href = "cart.html";
+		if(!localStorage.getItem("token")){
+			alert("请登录后才能使用购物车功能！");
+			location.href = "login.html";
+		}else{
+			location.href = "cart.html";
+		}
+	})
+	$("#point").mouseenter(function(){
+		if($(this).is(":animated")) return;
+		$(this).animate({"left": 635},350);
+		$(this).animate({"left": 650},350);
+		$(this).animate({"left": 635},350);
+		$(this).animate({"left": 650},350);
+	})
+	$(".phone").mouseenter(function(){
+//		if($(".phone span").is(":animated")) return; 
+//		if($(".phone p").is(":animated")) return; 
+		$(".phoneQr").css({"display": "block"});
+		$(".phone span").animate({"opacity": 1},300);
+		$(".phone p").animate({"opacity": 1},300);
+	})
+	$(".phone").mouseleave(function(){
+//		if($(".phone span").is(":animated")) return; 
+//		if($(".phone p").is(":animated")) return; 
+		$(".phoneQr").css({"display": "none"});
+		$(".phone span").animate({"opacity": 0.3},300);
+		$(".phone p").animate({"opacity": 0.3},300);
+	})
+	$(".friendly p a").mouseenter(function(){
+//		if($(this).is(":animated")) return; 
+		$(this).animate({"opacity": 1},300);
+	})
+	$(".friendly p a").mouseleave(function(){
+//		if($(this).is(":animated")) return; 
+		$(this).animate({"opacity": 0.3},300);
+	})
+	$(".wechat").mouseenter(function(){
+		$(".wechatQr").css({"display": "block"});
+	})
+	$(".wechat").mouseleave(function(){
+		$(".wechatQr").css({"display": "none"});
 	})
 })

@@ -12,7 +12,7 @@ $(function(){
 			},
 			"dataType": "json",
 			"success": function(response){
-				console.log(response);
+//				console.log(response);
 				if(response.code === 0){
 					var data = response.data;
 					for(key in data){

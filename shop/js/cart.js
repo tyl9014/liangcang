@@ -50,7 +50,7 @@ $(function(){
 		"type": "get",
 		"dataType": "json",
 		"success": function(response){
-			console.log(response);
+//			console.log(response);
 			if(response.data.length > 0 ){
 				for(var i=0;i<response.data.length;i++){
 					var obj = response.data[i];
@@ -78,6 +78,19 @@ $(function(){
 			$(".goods-op").click(function(){
 				alert("确定");
 				var goods = this.parentNode;
+				var goods_id = goods.getElementsByClassName("goods_id")[0].value;
+				$.ajax({
+					"url": "http://h6.duchengjiu.top/shop/api_cart.php?token=" + localStorage.token,
+					"type": "POST",
+					"dataType": "json",
+					"data": {
+						"goods_id": goods_id,
+						"number": 0
+					},
+					"success": function(response){
+//						console.log(response);
+					}
+				})
 				$(goods).remove();
 			})
 			$(".left-button").click(function(){
@@ -109,7 +122,7 @@ $(function(){
 		if(event.target.id === "selectAll"){
 			var selected = event.target.checked;
 			var checkboxs = document.getElementsByClassName("chkbox");
-			console.log(1);
+//			console.log(1);
 			for(var i=0;i<checkboxs.length;i++){
 				checkboxs[i].checked = selected;
 				var totalGoodsPrice = checkboxs[i].parentNode.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.innerText;
@@ -122,7 +135,7 @@ $(function(){
 		}
 		if(event.target.type === "checkbox"){
 			var checkboxs = document.getElementsByClassName("chkbox");
-			console.log(2);
+//			console.log(2);
 			for(var i=0;i<checkboxs.length;i++){
 				var objGoods = checkboxs[i];
 				if($(objGoods).is(':checked')){
@@ -132,5 +145,44 @@ $(function(){
 			}
 			$("#sumMoney").text("￥" + sum);
 		}
+	})
+	$("#balance").click(function(){
+		var sum = $("#sumMoney").text().substr(1);
+		location.href = "submit.html?sum=" + sum;
+	})
+	$("#point").mouseenter(function(){
+		if($(this).is(":animated")) return;
+		$(this).animate({"left": 635},350);
+		$(this).animate({"left": 650},350);
+		$(this).animate({"left": 635},350);
+		$(this).animate({"left": 650},350);
+	})
+	$(".phone").mouseenter(function(){
+//		if($(".phone span").is(":animated")) return; 
+//		if($(".phone p").is(":animated")) return; 
+		$(".phoneQr").css({"display": "block"});
+		$(".phone span").animate({"opacity": 1},300);
+		$(".phone p").animate({"opacity": 1},300);
+	})
+	$(".phone").mouseleave(function(){
+//		if($(".phone span").is(":animated")) return; 
+//		if($(".phone p").is(":animated")) return; 
+		$(".phoneQr").css({"display": "none"});
+		$(".phone span").animate({"opacity": 0.3},300);
+		$(".phone p").animate({"opacity": 0.3},300);
+	})
+	$(".friendly p a").mouseenter(function(){
+//		if($(this).is(":animated")) return; 
+		$(this).animate({"opacity": 1},300);
+	})
+	$(".friendly p a").mouseleave(function(){
+//		if($(this).is(":animated")) return; 
+		$(this).animate({"opacity": 0.3},300);
+	})
+	$(".wechat").mouseenter(function(){
+		$(".wechatQr").css({"display": "block"});
+	})
+	$(".wechat").mouseleave(function(){
+		$(".wechatQr").css({"display": "none"});
 	})
 })

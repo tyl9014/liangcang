@@ -32,16 +32,23 @@ nav{width: 100%;height: 56px;background-color: #25292e;overflow: hidden;}
 .circles ul{width: 208px;height: 5px; margin: 10px auto;}
 .circles ul li{width: 20px;height: 5px;background-color: #e8e8e8;float: left;margin-left: 6px;cursor: pointer;}
 .circles ul li.cur{background-color: #45494d;}
-#classific{width: 1000px;margin-left: 300px;margin-top: 130px;}
-#classific h6{width: 1000px;height: 30px;line-height: 30px;border-bottom: 1px solid #ccc;text-align: center;margin-top: 50px;}
-#classificList{width: 1024px;margin-top: 40px;}
-#classificList li{width: 317px;height: 380px;float: left;margin-right: 24px;margin-bottom: 30px;position: relative;}
-#classificList li:hover .cover{display: block;}
-#classificList li a img{width: 317px;height: 317px;}
+.contentPic{width: 1000px;height: 403px;margin-left: 300px;margin-top: 130px;}
+.leftPic{float:left;}
+.leftPic_1{margin-bottom: 23px;}
+.midPic{float:left;margin: 0 24px;}
+.RightPic{float:left;}
+.RightPic_1{margin-bottom: 23px;}
+#hotStuff{width: 1000px;margin-left: 300px;}
+#hotStuff h6{width: 1000px;height: 30px;line-height: 30px;border-bottom: 1px solid #ccc;text-align: center;margin-top: 50px;}
+#hotGoods{width: 1024px;height: 1640px;margin-top: 40px;}
+#hotGoods li{width: 317px;height: 380px;float: left;margin-right: 24px;margin-bottom: 30px;position: relative;}
+#hotGoods li:hover .cover{display: block;}
+#hotGoods li a img{width: 317px;height: 317px;}
 .cover{width: 320px;height: 320px;background-color: rgba(72,72,72,0.9);display: none;position: absolute;left: 0;top: 0;}
 .cover h2{margin-left: 22px;margin-top: 22px;margin-bottom: 90px;font-size: 22px;color: #0c6eba;}
 .cover p{width: 245px;margin: 0 auto;font-size: 14px;margin-bottom: 10px;text-align: center;font-weight: 700;color: white;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .cover span{display: block;width: 265px;color: white;font-size: 12px;margin: 20px auto;text-align: center;}
+footer{padding-top: 40px;}
 .footTop{width: 100%;height: 247px;border-top: 1px solid #ccc;background-color: #fbfdfe;clear: both;position: relative;}
 .footTop h4{width: 177px;height: 15px;background: url(../img/images.png) no-repeat 0 -417px;margin: 50px auto;}
 #point{background: url(../img/images.png) no-repeat -173px -356px;position: absolute;top: 50px;left: 650px;width: 27px;height: 15px;}
@@ -72,3 +79,10 @@ nav{width: 100%;height: 56px;background-color: #25292e;overflow: hidden;}
 .weibo{width: 23px;height: 19px;background: url(../img/images.png) no-repeat -150px 0;}
 .weibo:hover{background-position-y: -24px;}
 .wechatQr{width: 145px;height: 145px;background: url(../img/images.png) no-repeat 0 -148px;position: absolute;left: 20px;top: -185px;display: none;}
+.button{width: 524px;height: 18px;margin: 10px auto 60px;}
+#ButtonPrev{color: black;display: inline-block;float: left;width: 60px;height: 18px;border:1px solid #ccc;background-color: #efefef;text-align: center;line-height: 18px;cursor:pointer;border-radius: 6px;font-size: 12px;}
+#ButtonNext{color: black;display: inline-block;float: right;width: 60px;height: 18px;border:1px solid #ccc;background-color: #efefef;text-align: center;line-height: 18px;cursor:pointer;border-radius: 6px;font-size: 12px;}
+.button-center{float: left;overflow: hidden;width:400px;height: 18px;}
+#ButtonCenter{float: left;width: auto;height:17px;margin-left: 0;}
+#ButtonCenter span{width: 18px;height: 18px;color: #878787;float: left;text-align: center;line-height: 18px;margin: 0 5px;cursor:pointer;}
+#ButtonCenter span.button-center-span{background-color: #98b5d5;border-radius: 5px;}
